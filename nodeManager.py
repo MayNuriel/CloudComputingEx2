@@ -19,17 +19,14 @@ class Manager:
     limit = 3 # rate limit - time in seconds to create new worker
     workerInCreatingProcess = False # indicates whether a worker is still in process of creation
     
-    
     @nodeManager.route('/initializationVariables', methods=['POST'])
     def initializationVariables():
         if Manager.myIP is None and Manager.siblingIP is None:
             Manager.myIP = request.args.get('myIP')
             Manager.siblingIP = request.args.get('siblingIP')
-            thread = threading.Thread(target=Manager.timer_5_sec_to_increase_workers_if_needed)
-            thread.start() 
+            threading.Thread(target=Manager.timer_5_sec_to_increase_workers_if_needed).start()
         return 'POST request processed successfully', 200
-   
-
+    
     @nodeManager.route('/enqueue', methods=['PUT'])
     def enqueue():
        iterations = request.args.get('iterations')
@@ -39,6 +36,7 @@ class Manager:
     
     @staticmethod
     def timer_5_sec_to_increase_workers_if_needed():
+        print()
         while True:
             if len(Manager.tasks) > 0 and (datetime.now() - Manager.tasks[0][2]).total_seconds() > Manager.limit:
                 if Manager.numOfWorkers < Manager.maxNumOfWorkers:
@@ -208,9 +206,8 @@ class Manager:
         # Execute the worker.py script on the instance using SSH
         ssh_client.exec_command(
             'export FLASK_APP=/home/ubuntu/worker.py && nohup flask run --host 0.0.0.0 &>/dev/null &')
-
-        time.sleep(30) 
-         Manager.workerInCreatingProcess = False #Updates the queue with the remaining completed tasks
+        time.sleep(30)
+        Manager.workerInCreatingProcess = False #creating process has done 
         #initializing worker's variables 
         requests.put(f'http://{public_ip}:5000/start?parent_ip={Manager.myIP}&machine2_ip={Manager.siblingIP}&worker_id={instance_id}')
         return f'(public_ip: {public_ip})'
