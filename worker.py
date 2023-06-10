@@ -3,7 +3,6 @@ from datetime import datetime
 import requests
 import time
 
-
 app = Flask(__name__)
 
 class Worker:
