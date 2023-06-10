@@ -46,7 +46,6 @@ class Manager:
                         Manager.workerInCreatingProcess = True
                         Manager.numOfWorkers += 1
                         threading.Thread(target=Manager.createWorker).start()
-                        Manager.workerInCreatingProcess = False
                 else:
                     if Manager.siblingIP is not None and not Manager.workerInCreatingProcess:
                         response = requests.get(f"http://{Manager.siblingIP}:5000/tryGetNodeQuota")
@@ -56,7 +55,6 @@ class Manager:
                             Manager.numOfWorkers += 1
                             Manager.workerInCreatingProcess = True
                             threading.Thread(target=Manager.createWorker).start()
-                            Manager.workerInCreatingProcess = False
             time.sleep(5)
 
     @nodeManager.route('/tryGetNodeQuota', methods=['GET'])
@@ -212,6 +210,7 @@ class Manager:
             'export FLASK_APP=/home/ubuntu/worker.py && nohup flask run --host 0.0.0.0 &>/dev/null &')
 
         time.sleep(30) 
+         Manager.workerInCreatingProcess = False #Updates the queue with the remaining completed tasks
         #initializing worker's variables 
         requests.put(f'http://{public_ip}:5000/start?parent_ip={Manager.myIP}&machine2_ip={Manager.siblingIP}&worker_id={instance_id}')
         return f'(public_ip: {public_ip})'
