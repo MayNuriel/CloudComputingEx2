@@ -46,13 +46,16 @@ class Manager:
                         threading.Thread(target=Manager.createWorker).start()
                 else:
                     if Manager.siblingIP is not None and not Manager.workerInCreatingProcess:
-                        response = requests.get(f"http://{Manager.siblingIP}:5000/tryGetNodeQuota")
-                        if response.status_code == 200 and response.text == "True":
-                        # Successful request, so we can create new worker
-                            Manager.maxNumOfWorkers += 1
-                            Manager.numOfWorkers += 1
-                            Manager.workerInCreatingProcess = True
-                            threading.Thread(target=Manager.createWorker).start()
+                        try:
+                            response = requests.get(f"http://{Manager.siblingIP}:5000/tryGetNodeQuota")
+                            if response.status_code == 200 and response.text == "True":
+                            # Successful request, so we can create new worker
+                                Manager.maxNumOfWorkers += 1
+                                Manager.numOfWorkers += 1
+                                Manager.workerInCreatingProcess = True
+                                threading.Thread(target=Manager.createWorker).start()
+                        except Exception as e:
+                            print(f"Error: {e}")
             time.sleep(5)
 
     @nodeManager.route('/tryGetNodeQuota', methods=['GET'])
@@ -77,11 +80,14 @@ class Manager:
             siblingNumOfCompletedTasks = top - len(Manager.completedTasks)
             completedTasksToReturn = Manager.completedTasks
             Manager.completedTasks = []
-            response = requests.get(f"http://{Manager.siblingIP}:5000/bringFromSibling?num={siblingNumOfCompletedTasks}") 
-            if response.status_code == 200:
-                # Successful request
-                completedTasksFromSibling = response.json()
-                completedTasksToReturn += completedTasksFromSibling
+            try:
+                response = requests.get(f"http://{Manager.siblingIP}:5000/bringFromSibling?num={siblingNumOfCompletedTasks}") 
+                if response.status_code == 200:
+                    # Successful request
+                    completedTasksFromSibling = response.json()
+                    completedTasksToReturn += completedTasksFromSibling
+            except Exception as e:
+                print(f"Error: {e}")        
         for task in range(len(completedTasksToReturn)):
             finalResponse += f"\ntask #{task + 1} output is: {completedTasksToReturn[task]}, \n"
         return finalResponse
