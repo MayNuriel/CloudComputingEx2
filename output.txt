@@ -1,7 +1,7 @@
-Creating key pair cloud-course-285133600.pem to connect to instances and save locally
-Setting up firewall my-sg-424477000
+Creating key pair cloud-course-632793600.pem to connect to instances and save locally
+Setting up firewall my-sg-863309400
 {
-    "GroupId": "sg-03954f43ff871706c"
+    "GroupId": "sg-0a3ee5b3ae5492718"
 }
 My IP: 212.143.28.21
 Setting up rule allowing SSH access to 212.143.28.21 only
@@ -9,8 +9,8 @@ Setting up rule allowing SSH access to 212.143.28.21 only
     "Return": true,
     "SecurityGroupRules": [
         {
-            "SecurityGroupRuleId": "sgr-0867636228194ce23",
-            "GroupId": "sg-03954f43ff871706c",
+            "SecurityGroupRuleId": "sgr-057c8aaac4e499ca4",
+            "GroupId": "sg-0a3ee5b3ae5492718",
             "GroupOwnerId": "477135034237",
             "IsEgress": false,
             "IpProtocol": "tcp",
@@ -25,8 +25,8 @@ Setting up rule allowing HTTP (port 5000) access to all IPs
     "Return": true,
     "SecurityGroupRules": [
         {
-            "SecurityGroupRuleId": "sgr-0bad3134e96ec81cc",
-            "GroupId": "sg-03954f43ff871706c",
+            "SecurityGroupRuleId": "sgr-0a25372971b027cd7",
+            "GroupId": "sg-0a3ee5b3ae5492718",
             "GroupOwnerId": "477135034237",
             "IsEgress": false,
             "IpProtocol": "tcp",
@@ -38,10 +38,10 @@ Setting up rule allowing HTTP (port 5000) access to all IPs
 }
 Creating first Ubuntu 20.04 instance...
 Waiting for first instance creation...
-New instance i-0b932e4e4dbab801a @ 3.84.141.77
+New instance i-0ba7e8e223c787bcc @ 3.87.143.228
 Creating second Ubuntu 20.04 instance...
 Waiting for second instance creation...
-New instance i-020510933ecea24b2 @ 35.175.137.218
+New instance i-02a16c6303a5cb685 @ 54.86.43.13
 Deploying code to production instances
 Setting up production environment on first instance
 Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-1038-aws x86_64)
@@ -50,11 +50,11 @@ Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-1038-aws x86_64)
  * Management:     https://landscape.canonical.com
  * Support:        https://ubuntu.com/advantage
 
-  System information as of Sat Jun 10 19:32:44 UTC 2023
+  System information as of Sun Jun 11 18:35:31 UTC 2023
 
-  System load:  0.37              Processes:             112
+  System load:  0.78              Processes:             109
   Usage of /:   16.5% of 7.69GB   Users logged in:       0
-  Memory usage: 24%               IPv4 address for ens5: 172.31.85.13
+  Memory usage: 23%               IPv4 address for ens5: 172.31.85.187
   Swap usage:   0%
 
 
@@ -76,11 +76,11 @@ Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-1038-aws x86_64)
  * Management:     https://landscape.canonical.com
  * Support:        https://ubuntu.com/advantage
 
-  System information as of Sat Jun 10 19:32:46 UTC 2023
+  System information as of Sun Jun 11 18:35:33 UTC 2023
 
-  System load:  0.67              Processes:             112
+  System load:  1.81              Processes:             113
   Usage of /:   16.5% of 7.69GB   Users logged in:       0
-  Memory usage: 24%               IPv4 address for ens5: 172.31.82.63
+  Memory usage: 24%               IPv4 address for ens5: 172.31.94.172
   Swap usage:   0%
 
 
@@ -102,11 +102,11 @@ Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-1038-aws x86_64)
  * Management:     https://landscape.canonical.com
  * Support:        https://ubuntu.com/advantage
 
-  System information as of Sat Jun 10 19:32:49 UTC 2023
+  System information as of Sun Jun 11 18:35:36 UTC 2023
 
-  System load:  0.42              Processes:             112
+  System load:  0.72              Processes:             109
   Usage of /:   16.5% of 7.69GB   Users logged in:       0
-  Memory usage: 24%               IPv4 address for ens5: 172.31.85.13
+  Memory usage: 23%               IPv4 address for ens5: 172.31.85.187
   Swap usage:   0%
 
 
@@ -124,14 +124,14 @@ Run 'do-release-upgrade' to upgrade to it.
 Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal InRelease
 Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
 Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
-Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
-Get:5 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:4 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
 Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe Translation-en [5124 kB]
 Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 c-n-f Metadata [265 kB]
 Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [144 kB]
 Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/multiverse Translation-en [104 kB]
 Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/multiverse amd64 c-n-f Metadata [9136 B]
-Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2613 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2615 kB]
 Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [440 kB]
 Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [16.8 kB]
 Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [1937 kB]
@@ -163,7 +163,7 @@ Get:39 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Met
 Get:40 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [22.9 kB]
 Get:41 http://security.ubuntu.com/ubuntu focal-security/multiverse Translation-en [5488 B]
 Get:42 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [540 B]
-Fetched 27.1 MB in 4s (6780 kB/s)
+Fetched 27.1 MB in 4s (6795 kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -268,7 +268,7 @@ Get:58 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 p
 Get:59 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 python3-dev amd64 3.8.2-0ubuntu2 [1212 B]
 Get:60 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 python3-wheel all 0.34.2-1ubuntu0.1 [23.9 kB]
 Get:61 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 python3-pip all 20.0.2-5ubuntu1.8 [231 kB]
-Fetched 61.9 MB in 1s (53.1 MB/s)
+Fetched 61.9 MB in 1s (53.9 MB/s)
 (Reading database ... 
 (Reading database ... 5%
 (Reading database ... 10%
@@ -647,56 +647,56 @@ Processing triggers for man-db (2.9.1-1) ...
 Processing triggers for mime-support (3.64ubuntu1) ...
 Collecting flask
   Downloading Flask-2.3.2-py3-none-any.whl (96 kB)
-Collecting importlib-metadata>=3.6.0; python_version < "3.10"
-  Downloading importlib_metadata-6.6.0-py3-none-any.whl (22 kB)
-Collecting Werkzeug>=2.3.3
-  Downloading Werkzeug-2.3.6-py3-none-any.whl (242 kB)
 Collecting blinker>=1.6.2
   Downloading blinker-1.6.2-py3-none-any.whl (13 kB)
-Collecting itsdangerous>=2.1.2
-  Downloading itsdangerous-2.1.2-py3-none-any.whl (15 kB)
-Collecting click>=8.1.3
-  Downloading click-8.1.3-py3-none-any.whl (96 kB)
 Collecting Jinja2>=3.1.2
   Downloading Jinja2-3.1.2-py3-none-any.whl (133 kB)
-Requirement already satisfied: zipp>=0.5 in /usr/lib/python3/dist-packages (from importlib-metadata>=3.6.0; python_version < "3.10"->flask) (1.0.0)
-Collecting MarkupSafe>=2.1.1
+Collecting importlib-metadata>=3.6.0; python_version < "3.10"
+  Downloading importlib_metadata-6.6.0-py3-none-any.whl (22 kB)
+Collecting click>=8.1.3
+  Downloading click-8.1.3-py3-none-any.whl (96 kB)
+Collecting itsdangerous>=2.1.2
+  Downloading itsdangerous-2.1.2-py3-none-any.whl (15 kB)
+Collecting Werkzeug>=2.3.3
+  Downloading Werkzeug-2.3.6-py3-none-any.whl (242 kB)
+Collecting MarkupSafe>=2.0
   Downloading MarkupSafe-2.1.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
-Installing collected packages: importlib-metadata, MarkupSafe, Werkzeug, blinker, itsdangerous, click, Jinja2, flask
-  Attempting uninstall: importlib-metadata
-    Found existing installation: importlib-metadata 1.5.0
-    Not uninstalling importlib-metadata at /usr/lib/python3/dist-packages, outside environment /usr
-    Can't uninstall 'importlib-metadata'. No files were found to uninstall.
-  Attempting uninstall: MarkupSafe
-    Found existing installation: MarkupSafe 1.1.0
-    Not uninstalling markupsafe at /usr/lib/python3/dist-packages, outside environment /usr
-    Can't uninstall 'MarkupSafe'. No files were found to uninstall.
+Requirement already satisfied: zipp>=0.5 in /usr/lib/python3/dist-packages (from importlib-metadata>=3.6.0; python_version < "3.10"->flask) (1.0.0)
+Installing collected packages: blinker, MarkupSafe, Jinja2, importlib-metadata, click, itsdangerous, Werkzeug, flask
   Attempting uninstall: blinker
     Found existing installation: blinker 1.4
     Not uninstalling blinker at /usr/lib/python3/dist-packages, outside environment /usr
     Can't uninstall 'blinker'. No files were found to uninstall.
-  Attempting uninstall: click
-    Found existing installation: Click 7.0
-    Not uninstalling click at /usr/lib/python3/dist-packages, outside environment /usr
-    Can't uninstall 'Click'. No files were found to uninstall.
+  Attempting uninstall: MarkupSafe
+    Found existing installation: MarkupSafe 1.1.0
+    Not uninstalling markupsafe at /usr/lib/python3/dist-packages, outside environment /usr
+    Can't uninstall 'MarkupSafe'. No files were found to uninstall.
   Attempting uninstall: Jinja2
     Found existing installation: Jinja2 2.10.1
     Not uninstalling jinja2 at /usr/lib/python3/dist-packages, outside environment /usr
     Can't uninstall 'Jinja2'. No files were found to uninstall.
+  Attempting uninstall: importlib-metadata
+    Found existing installation: importlib-metadata 1.5.0
+    Not uninstalling importlib-metadata at /usr/lib/python3/dist-packages, outside environment /usr
+    Can't uninstall 'importlib-metadata'. No files were found to uninstall.
+  Attempting uninstall: click
+    Found existing installation: Click 7.0
+    Not uninstalling click at /usr/lib/python3/dist-packages, outside environment /usr
+    Can't uninstall 'Click'. No files were found to uninstall.
 Successfully installed Jinja2-3.1.2 MarkupSafe-2.1.3 Werkzeug-2.3.6 blinker-1.6.2 click-8.1.3 flask-2.3.2 importlib-metadata-6.6.0 itsdangerous-2.1.2
 Collecting boto3
   Downloading boto3-1.26.151-py3-none-any.whl (135 kB)
-Collecting s3transfer<0.7.0,>=0.6.0
-  Downloading s3transfer-0.6.1-py3-none-any.whl (79 kB)
 Collecting botocore<1.30.0,>=1.29.151
   Downloading botocore-1.29.151-py3-none-any.whl (10.9 MB)
 Collecting jmespath<2.0.0,>=0.7.1
   Downloading jmespath-1.0.1-py3-none-any.whl (20 kB)
-Requirement already satisfied: urllib3<1.27,>=1.25.4 in /usr/lib/python3/dist-packages (from botocore<1.30.0,>=1.29.151->boto3) (1.25.8)
+Collecting s3transfer<0.7.0,>=0.6.0
+  Downloading s3transfer-0.6.1-py3-none-any.whl (79 kB)
 Collecting python-dateutil<3.0.0,>=2.1
   Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Requirement already satisfied: urllib3<1.27,>=1.25.4 in /usr/lib/python3/dist-packages (from botocore<1.30.0,>=1.29.151->boto3) (1.25.8)
 Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil<3.0.0,>=2.1->botocore<1.30.0,>=1.29.151->boto3) (1.14.0)
-Installing collected packages: jmespath, python-dateutil, botocore, s3transfer, boto3
+Installing collected packages: python-dateutil, jmespath, botocore, s3transfer, boto3
 Successfully installed boto3-1.26.151 botocore-1.29.151 jmespath-1.0.1 python-dateutil-2.8.2 s3transfer-0.6.1
 Requirement already satisfied: requests in /usr/lib/python3/dist-packages (2.22.0)
 Reading package lists...
@@ -713,7 +713,7 @@ Need to get 153 kB of archives.
 After this operation, 814 kB of additional disk space will be used.
 Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 python3-bcrypt amd64 3.1.7-2ubuntu1 [30.4 kB]
 Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-paramiko all 2.6.0-2ubuntu0.1 [122 kB]
-Fetched 153 kB in 0s (7013 kB/s)
+Fetched 153 kB in 0s (6932 kB/s)
 Selecting previously unselected package python3-bcrypt.
 (Reading database ... 
 (Reading database ... 5%
@@ -751,11 +751,11 @@ Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-1038-aws x86_64)
  * Management:     https://landscape.canonical.com
  * Support:        https://ubuntu.com/advantage
 
-  System information as of Sat Jun 10 19:33:59 UTC 2023
+  System information as of Sun Jun 11 18:36:45 UTC 2023
 
-  System load:  0.21              Processes:             111
+  System load:  0.56              Processes:             110
   Usage of /:   16.5% of 7.69GB   Users logged in:       0
-  Memory usage: 24%               IPv4 address for ens5: 172.31.82.63
+  Memory usage: 24%               IPv4 address for ens5: 172.31.94.172
   Swap usage:   0%
 
 
@@ -780,7 +780,7 @@ Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 c-n-f 
 Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [144 kB]
 Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/multiverse Translation-en [104 kB]
 Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/multiverse amd64 c-n-f Metadata [9136 B]
-Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2613 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2615 kB]
 Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [440 kB]
 Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [16.8 kB]
 Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [1937 kB]
@@ -812,7 +812,7 @@ Get:39 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Met
 Get:40 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [22.9 kB]
 Get:41 http://security.ubuntu.com/ubuntu focal-security/multiverse Translation-en [5488 B]
 Get:42 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [540 B]
-Fetched 27.1 MB in 4s (6426 kB/s)
+Fetched 27.1 MB in 4s (6861 kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -917,7 +917,7 @@ Get:58 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 p
 Get:59 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 python3-dev amd64 3.8.2-0ubuntu2 [1212 B]
 Get:60 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 python3-wheel all 0.34.2-1ubuntu0.1 [23.9 kB]
 Get:61 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 python3-pip all 20.0.2-5ubuntu1.8 [231 kB]
-Fetched 61.9 MB in 1s (58.4 MB/s)
+Fetched 61.9 MB in 1s (55.9 MB/s)
 (Reading database ... 
 (Reading database ... 5%
 (Reading database ... 10%
@@ -1296,38 +1296,38 @@ Processing triggers for man-db (2.9.1-1) ...
 Processing triggers for mime-support (3.64ubuntu1) ...
 Collecting flask
   Downloading Flask-2.3.2-py3-none-any.whl (96 kB)
+Collecting click>=8.1.3
+  Downloading click-8.1.3-py3-none-any.whl (96 kB)
+Collecting importlib-metadata>=3.6.0; python_version < "3.10"
+  Downloading importlib_metadata-6.6.0-py3-none-any.whl (22 kB)
+Collecting Werkzeug>=2.3.3
+  Downloading Werkzeug-2.3.6-py3-none-any.whl (242 kB)
 Collecting blinker>=1.6.2
   Downloading blinker-1.6.2-py3-none-any.whl (13 kB)
 Collecting itsdangerous>=2.1.2
   Downloading itsdangerous-2.1.2-py3-none-any.whl (15 kB)
-Collecting click>=8.1.3
-  Downloading click-8.1.3-py3-none-any.whl (96 kB)
-Collecting Werkzeug>=2.3.3
-  Downloading Werkzeug-2.3.6-py3-none-any.whl (242 kB)
-Collecting importlib-metadata>=3.6.0; python_version < "3.10"
-  Downloading importlib_metadata-6.6.0-py3-none-any.whl (22 kB)
 Collecting Jinja2>=3.1.2
   Downloading Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Requirement already satisfied: zipp>=0.5 in /usr/lib/python3/dist-packages (from importlib-metadata>=3.6.0; python_version < "3.10"->flask) (1.0.0)
 Collecting MarkupSafe>=2.1.1
   Downloading MarkupSafe-2.1.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
-Requirement already satisfied: zipp>=0.5 in /usr/lib/python3/dist-packages (from importlib-metadata>=3.6.0; python_version < "3.10"->flask) (1.0.0)
-Installing collected packages: blinker, itsdangerous, click, MarkupSafe, Werkzeug, importlib-metadata, Jinja2, flask
-  Attempting uninstall: blinker
-    Found existing installation: blinker 1.4
-    Not uninstalling blinker at /usr/lib/python3/dist-packages, outside environment /usr
-    Can't uninstall 'blinker'. No files were found to uninstall.
+Installing collected packages: click, importlib-metadata, MarkupSafe, Werkzeug, blinker, itsdangerous, Jinja2, flask
   Attempting uninstall: click
     Found existing installation: Click 7.0
     Not uninstalling click at /usr/lib/python3/dist-packages, outside environment /usr
     Can't uninstall 'Click'. No files were found to uninstall.
-  Attempting uninstall: MarkupSafe
-    Found existing installation: MarkupSafe 1.1.0
-    Not uninstalling markupsafe at /usr/lib/python3/dist-packages, outside environment /usr
-    Can't uninstall 'MarkupSafe'. No files were found to uninstall.
   Attempting uninstall: importlib-metadata
     Found existing installation: importlib-metadata 1.5.0
     Not uninstalling importlib-metadata at /usr/lib/python3/dist-packages, outside environment /usr
     Can't uninstall 'importlib-metadata'. No files were found to uninstall.
+  Attempting uninstall: MarkupSafe
+    Found existing installation: MarkupSafe 1.1.0
+    Not uninstalling markupsafe at /usr/lib/python3/dist-packages, outside environment /usr
+    Can't uninstall 'MarkupSafe'. No files were found to uninstall.
+  Attempting uninstall: blinker
+    Found existing installation: blinker 1.4
+    Not uninstalling blinker at /usr/lib/python3/dist-packages, outside environment /usr
+    Can't uninstall 'blinker'. No files were found to uninstall.
   Attempting uninstall: Jinja2
     Found existing installation: Jinja2 2.10.1
     Not uninstalling jinja2 at /usr/lib/python3/dist-packages, outside environment /usr
@@ -1335,17 +1335,17 @@ Installing collected packages: blinker, itsdangerous, click, MarkupSafe, Werkzeu
 Successfully installed Jinja2-3.1.2 MarkupSafe-2.1.3 Werkzeug-2.3.6 blinker-1.6.2 click-8.1.3 flask-2.3.2 importlib-metadata-6.6.0 itsdangerous-2.1.2
 Collecting boto3
   Downloading boto3-1.26.151-py3-none-any.whl (135 kB)
+Collecting jmespath<2.0.0,>=0.7.1
+  Downloading jmespath-1.0.1-py3-none-any.whl (20 kB)
 Collecting s3transfer<0.7.0,>=0.6.0
   Downloading s3transfer-0.6.1-py3-none-any.whl (79 kB)
 Collecting botocore<1.30.0,>=1.29.151
   Downloading botocore-1.29.151-py3-none-any.whl (10.9 MB)
-Collecting jmespath<2.0.0,>=0.7.1
-  Downloading jmespath-1.0.1-py3-none-any.whl (20 kB)
 Collecting python-dateutil<3.0.0,>=2.1
   Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
 Requirement already satisfied: urllib3<1.27,>=1.25.4 in /usr/lib/python3/dist-packages (from botocore<1.30.0,>=1.29.151->boto3) (1.25.8)
 Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil<3.0.0,>=2.1->botocore<1.30.0,>=1.29.151->boto3) (1.14.0)
-Installing collected packages: python-dateutil, jmespath, botocore, s3transfer, boto3
+Installing collected packages: jmespath, python-dateutil, botocore, s3transfer, boto3
 Successfully installed boto3-1.26.151 botocore-1.29.151 jmespath-1.0.1 python-dateutil-2.8.2 s3transfer-0.6.1
 Requirement already satisfied: requests in /usr/lib/python3/dist-packages (2.22.0)
 Reading package lists...
@@ -1362,7 +1362,7 @@ Need to get 153 kB of archives.
 After this operation, 814 kB of additional disk space will be used.
 Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 python3-bcrypt amd64 3.1.7-2ubuntu1 [30.4 kB]
 Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-paramiko all 2.6.0-2ubuntu0.1 [122 kB]
-Fetched 153 kB in 0s (6079 kB/s)
+Fetched 153 kB in 0s (7142 kB/s)
 Selecting previously unselected package python3-bcrypt.
 (Reading database ... 
 (Reading database ... 5%
@@ -1396,41 +1396,41 @@ Setting up python3-paramiko (2.6.0-2ubuntu0.1) ...
 {
     "InstanceProfile": {
         "Path": "/",
-        "InstanceProfileName": "name-1-cloud-course-736472400",
-        "InstanceProfileId": "AIPAW6F3W256W56FECDH7",
-        "Arn": "arn:aws:iam::477135034237:instance-profile/name-1-cloud-course-736472400",
-        "CreateDate": "2023-06-10T19:35:30+00:00",
+        "InstanceProfileName": "name-1-cloud-course-806661700",
+        "InstanceProfileId": "AIPAW6F3W256QRXD57UI6",
+        "Arn": "arn:aws:iam::477135034237:instance-profile/name-1-cloud-course-806661700",
+        "CreateDate": "2023-06-11T18:38:13+00:00",
         "Roles": []
     }
 }
 {
     "InstanceProfile": {
         "Path": "/",
-        "InstanceProfileName": "name-2-cloud-course-828490600",
-        "InstanceProfileId": "AIPAW6F3W256T3IIXPHJQ",
-        "Arn": "arn:aws:iam::477135034237:instance-profile/name-2-cloud-course-828490600",
-        "CreateDate": "2023-06-10T19:35:33+00:00",
+        "InstanceProfileName": "name-2-cloud-course-838438600",
+        "InstanceProfileId": "AIPAW6F3W256XU56A56J4",
+        "Arn": "arn:aws:iam::477135034237:instance-profile/name-2-cloud-course-838438600",
+        "CreateDate": "2023-06-11T18:38:16+00:00",
         "Roles": []
     }
 }
 {
     "IamInstanceProfileAssociation": {
-        "AssociationId": "iip-assoc-0a47693f1b87380a6",
-        "InstanceId": "i-0b932e4e4dbab801a",
+        "AssociationId": "iip-assoc-00b36aeb233a0c27d",
+        "InstanceId": "i-0ba7e8e223c787bcc",
         "IamInstanceProfile": {
-            "Arn": "arn:aws:iam::477135034237:instance-profile/name-1-cloud-course-736472400",
-            "Id": "AIPAW6F3W256W56FECDH7"
+            "Arn": "arn:aws:iam::477135034237:instance-profile/name-1-cloud-course-806661700",
+            "Id": "AIPAW6F3W256QRXD57UI6"
         },
         "State": "associating"
     }
 }
 {
     "IamInstanceProfileAssociation": {
-        "AssociationId": "iip-assoc-0d6349546f1a03e78",
-        "InstanceId": "i-020510933ecea24b2",
+        "AssociationId": "iip-assoc-057dc756813297454",
+        "InstanceId": "i-02a16c6303a5cb685",
         "IamInstanceProfile": {
-            "Arn": "arn:aws:iam::477135034237:instance-profile/name-2-cloud-course-828490600",
-            "Id": "AIPAW6F3W256T3IIXPHJQ"
+            "Arn": "arn:aws:iam::477135034237:instance-profile/name-2-cloud-course-838438600",
+            "Id": "AIPAW6F3W256XU56A56J4"
         },
         "State": "associating"
     }
@@ -1438,11 +1438,11 @@ Setting up python3-paramiko (2.6.0-2ubuntu0.1) ...
 {
     "IamInstanceProfileAssociations": [
         {
-            "AssociationId": "iip-assoc-0a47693f1b87380a6",
-            "InstanceId": "i-0b932e4e4dbab801a",
+            "AssociationId": "iip-assoc-00b36aeb233a0c27d",
+            "InstanceId": "i-0ba7e8e223c787bcc",
             "IamInstanceProfile": {
-                "Arn": "arn:aws:iam::477135034237:instance-profile/name-1-cloud-course-736472400",
-                "Id": "AIPAW6F3W256W56FECDH7"
+                "Arn": "arn:aws:iam::477135034237:instance-profile/name-1-cloud-course-806661700",
+                "Id": "AIPAW6F3W256QRXD57UI6"
             },
             "State": "associated"
         }
@@ -1451,28 +1451,28 @@ Setting up python3-paramiko (2.6.0-2ubuntu0.1) ...
 {
     "IamInstanceProfileAssociations": [
         {
-            "AssociationId": "iip-assoc-0d6349546f1a03e78",
-            "InstanceId": "i-020510933ecea24b2",
+            "AssociationId": "iip-assoc-057dc756813297454",
+            "InstanceId": "i-02a16c6303a5cb685",
             "IamInstanceProfile": {
-                "Arn": "arn:aws:iam::477135034237:instance-profile/name-2-cloud-course-828490600",
-                "Id": "AIPAW6F3W256T3IIXPHJQ"
+                "Arn": "arn:aws:iam::477135034237:instance-profile/name-2-cloud-course-838438600",
+                "Id": "AIPAW6F3W256XU56A56J4"
             },
-            "State": "associated"
+            "State": "associating"
         }
     ]
 }
-IAM roles 'name-1-cloud-course-736472400' and 'name-2-cloud-course-828490600' have been created and attached to the EC2 instances.
+IAM roles 'name-1-cloud-course-806661700' and 'name-2-cloud-course-838438600' have been created and attached to the EC2 instances.
 ---------------------------------------------------------------------------
 testing endpoints
-enqueue work to the first instance by the command: curl -X PUT --data-binary "@testing.bin" "http://3.84.141.77:5000/enqueue?iterations=1"
+enqueue work to the first instance by the command: curl -X PUT --data-binary "@testing.bin" "http://3.87.143.228:5000/enqueue?iterations=1"
 
 POST request processed successfullyPOST request processed successfullyPOST request processed successfully
-enqueue work to the first instance by the command: curl -X PUT --data-binary "@testing.bin" "http://35.175.137.218:5000/enqueue?iterations=2"
+enqueue work to the first instance by the command: curl -X PUT --data-binary "@testing.bin" "http://54.86.43.13:5000/enqueue?iterations=2"
 
 POST request processed successfully
 Waiting for 10 minutes...until the instances will be deployed..
 
-pull completed the 2 tasks from the first instance by the command: curl -X POST "http://3.84.141.77:5000/pullCompleted?top=2"
+pull completed the 2 tasks from the first instance by the command: curl -X POST "http://3.87.143.228:5000/pullCompleted?top=2"
 
 
 task #1 output is:  tÓì]ÙPr·âÌH*£çÛ¿ßòâÚñ½q2¥ò²Öa¢Ìp:ñÕ¤8Ýjm§­)Aú, 
