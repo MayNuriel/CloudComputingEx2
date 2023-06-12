@@ -18,6 +18,7 @@ each one of them creates ec2-instances, "workers", to do the job as needed (with
 
 •	The "nodeWorker.py" file contains the app "Manager" for the 2 instances which are handling the endpoints. The "worker.py" file contains the app "app" for the worker instances.
 
-•	In addition, you can see an output example of "setup.sh" file in "output.txt"
+•	In addition, you can see an output example of "setup.sh" file in "output.txt".
+  the "testing.bin" file is the one we used for the example of testing the enqueue endpoint
 
 
