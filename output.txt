@@ -1,7 +1,7 @@
-Creating key pair cloud-course-632793600.pem to connect to instances and save locally
-Setting up firewall my-sg-863309400
+Creating key pair cloud-course-396440600.pem to connect to instances and save locally
+Setting up firewall my-sg-725438800
 {
-    "GroupId": "sg-0a3ee5b3ae5492718"
+    "GroupId": "sg-05f4fa4621122ca7e"
 }
 My IP: 212.143.28.21
 Setting up rule allowing SSH access to 212.143.28.21 only
@@ -9,8 +9,8 @@ Setting up rule allowing SSH access to 212.143.28.21 only
     "Return": true,
     "SecurityGroupRules": [
         {
-            "SecurityGroupRuleId": "sgr-057c8aaac4e499ca4",
-            "GroupId": "sg-0a3ee5b3ae5492718",
+            "SecurityGroupRuleId": "sgr-05b343d154d1d1c17",
+            "GroupId": "sg-05f4fa4621122ca7e",
             "GroupOwnerId": "477135034237",
             "IsEgress": false,
             "IpProtocol": "tcp",
@@ -25,8 +25,8 @@ Setting up rule allowing HTTP (port 5000) access to all IPs
     "Return": true,
     "SecurityGroupRules": [
         {
-            "SecurityGroupRuleId": "sgr-0a25372971b027cd7",
-            "GroupId": "sg-0a3ee5b3ae5492718",
+            "SecurityGroupRuleId": "sgr-04cc8fca58be0e434",
+            "GroupId": "sg-05f4fa4621122ca7e",
             "GroupOwnerId": "477135034237",
             "IsEgress": false,
             "IpProtocol": "tcp",
@@ -38,10 +38,10 @@ Setting up rule allowing HTTP (port 5000) access to all IPs
 }
 Creating first Ubuntu 20.04 instance...
 Waiting for first instance creation...
-New instance i-0ba7e8e223c787bcc @ 3.87.143.228
+New instance i-048d5f2b7e93e5a5f @ 54.159.181.232
 Creating second Ubuntu 20.04 instance...
 Waiting for second instance creation...
-New instance i-02a16c6303a5cb685 @ 54.86.43.13
+New instance i-0614aab035a80135b @ 44.202.123.82
 Deploying code to production instances
 Setting up production environment on first instance
 Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-1038-aws x86_64)
@@ -50,11 +50,11 @@ Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-1038-aws x86_64)
  * Management:     https://landscape.canonical.com
  * Support:        https://ubuntu.com/advantage
 
-  System information as of Sun Jun 11 18:35:31 UTC 2023
+  System information as of Mon Jun 12 14:14:28 UTC 2023
 
-  System load:  0.78              Processes:             109
+  System load:  0.42              Processes:             107
   Usage of /:   16.5% of 7.69GB   Users logged in:       0
-  Memory usage: 23%               IPv4 address for ens5: 172.31.85.187
+  Memory usage: 23%               IPv4 address for ens5: 172.31.82.222
   Swap usage:   0%
 
 
@@ -76,11 +76,11 @@ Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-1038-aws x86_64)
  * Management:     https://landscape.canonical.com
  * Support:        https://ubuntu.com/advantage
 
-  System information as of Sun Jun 11 18:35:33 UTC 2023
+  System information as of Mon Jun 12 14:14:29 UTC 2023
 
-  System load:  1.81              Processes:             113
-  Usage of /:   16.5% of 7.69GB   Users logged in:       0
-  Memory usage: 24%               IPv4 address for ens5: 172.31.94.172
+  System load:  0.49              Processes:             112
+  Usage of /:   16.4% of 7.69GB   Users logged in:       0
+  Memory usage: 23%               IPv4 address for ens5: 172.31.87.40
   Swap usage:   0%
 
 
@@ -102,11 +102,11 @@ Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-1038-aws x86_64)
  * Management:     https://landscape.canonical.com
  * Support:        https://ubuntu.com/advantage
 
-  System information as of Sun Jun 11 18:35:36 UTC 2023
+  System information as of Mon Jun 12 14:14:33 UTC 2023
 
-  System load:  0.72              Processes:             109
+  System load:  0.39              Processes:             109
   Usage of /:   16.5% of 7.69GB   Users logged in:       0
-  Memory usage: 23%               IPv4 address for ens5: 172.31.85.187
+  Memory usage: 23%               IPv4 address for ens5: 172.31.82.222
   Swap usage:   0%
 
 
@@ -124,14 +124,14 @@ Run 'do-release-upgrade' to upgrade to it.
 Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal InRelease
 Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
 Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
-Get:4 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
-Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
+Get:5 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
 Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe Translation-en [5124 kB]
 Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 c-n-f Metadata [265 kB]
 Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [144 kB]
 Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/multiverse Translation-en [104 kB]
 Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/multiverse amd64 c-n-f Metadata [9136 B]
-Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2615 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2613 kB]
 Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [440 kB]
 Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [16.8 kB]
 Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [1937 kB]
@@ -152,7 +152,7 @@ Get:28 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports/universe T
 Get:29 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [880 B]
 Get:30 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports/multiverse amd64 c-n-f Metadata [116 B]
 Get:31 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [2232 kB]
-Get:32 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [358 kB]
+Get:32 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [359 kB]
 Get:33 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [13.0 kB]
 Get:34 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [1833 kB]
 Get:35 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [256 kB]
@@ -163,14 +163,14 @@ Get:39 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Met
 Get:40 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [22.9 kB]
 Get:41 http://security.ubuntu.com/ubuntu focal-security/multiverse Translation-en [5488 B]
 Get:42 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [540 B]
-Fetched 27.1 MB in 4s (6795 kB/s)
+Fetched 27.1 MB in 4s (6846 kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
 Reading state information...
 python3 is already the newest version (3.8.2-0ubuntu2).
 python3 set to manually installed.
-0 upgraded, 0 newly installed, 0 to remove and 258 not upgraded.
+0 upgraded, 0 newly installed, 0 to remove and 259 not upgraded.
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -204,7 +204,7 @@ The following NEW packages will be installed:
 The following packages will be upgraded:
   gcc-10-base libc6 libexpat1 libgcc-s1 libpython3.8 libpython3.8-minimal
   libpython3.8-stdlib libstdc++6 python3.8 python3.8-minimal zlib1g
-11 upgraded, 50 newly installed, 0 to remove and 247 not upgraded.
+11 upgraded, 50 newly installed, 0 to remove and 248 not upgraded.
 Need to get 61.9 MB of archives.
 After this operation, 228 MB of additional disk space will be used.
 Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 gcc-10-base amd64 10.3.0-1ubuntu1~20.04 [20.2 kB]
@@ -217,58 +217,58 @@ Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 li
 Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3.8 amd64 3.8.10-0ubuntu1~20.04.8 [387 kB]
 Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-stdlib amd64 3.8.10-0ubuntu1~20.04.8 [1675 kB]
 Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3.8-minimal amd64 3.8.10-0ubuntu1~20.04.8 [1902 kB]
-Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-minimal amd64 3.8.10-0ubuntu1~20.04.8 [717 kB]
-Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 binutils-common amd64 2.34-6ubuntu1.5 [207 kB]
-Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libbinutils amd64 2.34-6ubuntu1.5 [475 kB]
-Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libctf-nobfd0 amd64 2.34-6ubuntu1.5 [47.4 kB]
-Get:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libctf0 amd64 2.34-6ubuntu1.5 [46.6 kB]
-Get:16 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 binutils-x86-64-linux-gnu amd64 2.34-6ubuntu1.5 [1613 kB]
-Get:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 binutils amd64 2.34-6ubuntu1.5 [3372 B]
-Get:18 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libc-dev-bin amd64 2.31-0ubuntu9.9 [71.8 kB]
-Get:19 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 linux-libc-dev amd64 5.4.0-150.167 [1117 kB]
-Get:20 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libcrypt-dev amd64 1:4.4.10-10ubuntu4 [104 kB]
-Get:21 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libc6-dev amd64 2.31-0ubuntu9.9 [2519 kB]
-Get:22 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 gcc-9-base amd64 9.4.0-1ubuntu1~20.04.1 [19.4 kB]
-Get:23 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libisl22 amd64 0.22.1-1 [592 kB]
-Get:24 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libmpc3 amd64 1.1.0-1 [40.8 kB]
-Get:25 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 cpp-9 amd64 9.4.0-1ubuntu1~20.04.1 [7500 kB]
-Get:26 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 cpp amd64 4:9.3.0-1ubuntu2 [27.6 kB]
-Get:27 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libcc1-0 amd64 10.3.0-1ubuntu1~20.04 [48.8 kB]
-Get:28 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libgomp1 amd64 10.3.0-1ubuntu1~20.04 [102 kB]
-Get:29 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libitm1 amd64 10.3.0-1ubuntu1~20.04 [26.2 kB]
-Get:30 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libatomic1 amd64 10.3.0-1ubuntu1~20.04 [9284 B]
-Get:31 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libasan5 amd64 9.4.0-1ubuntu1~20.04.1 [2751 kB]
-Get:32 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 liblsan0 amd64 10.3.0-1ubuntu1~20.04 [835 kB]
-Get:33 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libtsan0 amd64 10.3.0-1ubuntu1~20.04 [2009 kB]
-Get:34 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libubsan1 amd64 10.3.0-1ubuntu1~20.04 [784 kB]
-Get:35 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libquadmath0 amd64 10.3.0-1ubuntu1~20.04 [146 kB]
-Get:36 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libgcc-9-dev amd64 9.4.0-1ubuntu1~20.04.1 [2359 kB]
-Get:37 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 gcc-9 amd64 9.4.0-1ubuntu1~20.04.1 [8274 kB]
-Get:38 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 gcc amd64 4:9.3.0-1ubuntu2 [5208 B]
-Get:39 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libstdc++-9-dev amd64 9.4.0-1ubuntu1~20.04.1 [1722 kB]
-Get:40 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 g++-9 amd64 9.4.0-1ubuntu1~20.04.1 [8420 kB]
-Get:41 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 g++ amd64 4:9.3.0-1ubuntu2 [1604 B]
-Get:42 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 make amd64 4.2.1-1.2 [162 kB]
-Get:43 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libdpkg-perl all 1.19.7ubuntu3.2 [231 kB]
-Get:44 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 dpkg-dev all 1.19.7ubuntu3.2 [679 kB]
-Get:45 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 build-essential amd64 12.8ubuntu1.1 [4664 B]
-Get:46 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libfakeroot amd64 1.24-1 [25.7 kB]
-Get:47 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 fakeroot amd64 1.24-1 [62.6 kB]
-Get:48 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libalgorithm-diff-perl all 1.19.03-2 [46.6 kB]
-Get:49 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libalgorithm-diff-xs-perl amd64 0.04-6 [11.3 kB]
-Get:50 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libalgorithm-merge-perl all 0.08-3 [12.0 kB]
-Get:51 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libexpat1-dev amd64 2.2.9-1ubuntu0.6 [116 kB]
-Get:52 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libfile-fcntllock-perl amd64 0.22-3build4 [33.1 kB]
-Get:53 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-dev amd64 3.8.10-0ubuntu1~20.04.8 [3950 kB]
-Get:54 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libpython3-dev amd64 3.8.2-0ubuntu2 [7236 B]
-Get:55 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 manpages-dev all 5.05-1 [2266 kB]
-Get:56 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 python-pip-whl all 20.0.2-5ubuntu1.8 [1805 kB]
+Get:11 http://security.ubuntu.com/ubuntu focal-security/universe amd64 python-pip-whl all 20.0.2-5ubuntu1.9 [1805 kB]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-minimal amd64 3.8.10-0ubuntu1~20.04.8 [717 kB]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 binutils-common amd64 2.34-6ubuntu1.5 [207 kB]
+Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libbinutils amd64 2.34-6ubuntu1.5 [475 kB]
+Get:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libctf-nobfd0 amd64 2.34-6ubuntu1.5 [47.4 kB]
+Get:16 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libctf0 amd64 2.34-6ubuntu1.5 [46.6 kB]
+Get:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 binutils-x86-64-linux-gnu amd64 2.34-6ubuntu1.5 [1613 kB]
+Get:18 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 binutils amd64 2.34-6ubuntu1.5 [3372 B]
+Get:19 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libc-dev-bin amd64 2.31-0ubuntu9.9 [71.8 kB]
+Get:20 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 linux-libc-dev amd64 5.4.0-150.167 [1117 kB]
+Get:21 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libcrypt-dev amd64 1:4.4.10-10ubuntu4 [104 kB]
+Get:22 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libc6-dev amd64 2.31-0ubuntu9.9 [2519 kB]
+Get:23 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 gcc-9-base amd64 9.4.0-1ubuntu1~20.04.1 [19.4 kB]
+Get:24 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libisl22 amd64 0.22.1-1 [592 kB]
+Get:25 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libmpc3 amd64 1.1.0-1 [40.8 kB]
+Get:26 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 cpp-9 amd64 9.4.0-1ubuntu1~20.04.1 [7500 kB]
+Get:27 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 cpp amd64 4:9.3.0-1ubuntu2 [27.6 kB]
+Get:28 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libcc1-0 amd64 10.3.0-1ubuntu1~20.04 [48.8 kB]
+Get:29 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libgomp1 amd64 10.3.0-1ubuntu1~20.04 [102 kB]
+Get:30 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libitm1 amd64 10.3.0-1ubuntu1~20.04 [26.2 kB]
+Get:31 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libatomic1 amd64 10.3.0-1ubuntu1~20.04 [9284 B]
+Get:32 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libasan5 amd64 9.4.0-1ubuntu1~20.04.1 [2751 kB]
+Get:33 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 liblsan0 amd64 10.3.0-1ubuntu1~20.04 [835 kB]
+Get:34 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libtsan0 amd64 10.3.0-1ubuntu1~20.04 [2009 kB]
+Get:35 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libubsan1 amd64 10.3.0-1ubuntu1~20.04 [784 kB]
+Get:36 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libquadmath0 amd64 10.3.0-1ubuntu1~20.04 [146 kB]
+Get:37 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libgcc-9-dev amd64 9.4.0-1ubuntu1~20.04.1 [2359 kB]
+Get:38 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 gcc-9 amd64 9.4.0-1ubuntu1~20.04.1 [8274 kB]
+Get:39 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 gcc amd64 4:9.3.0-1ubuntu2 [5208 B]
+Get:40 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libstdc++-9-dev amd64 9.4.0-1ubuntu1~20.04.1 [1722 kB]
+Get:41 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 g++-9 amd64 9.4.0-1ubuntu1~20.04.1 [8420 kB]
+Get:42 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 g++ amd64 4:9.3.0-1ubuntu2 [1604 B]
+Get:43 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 make amd64 4.2.1-1.2 [162 kB]
+Get:44 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libdpkg-perl all 1.19.7ubuntu3.2 [231 kB]
+Get:45 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 dpkg-dev all 1.19.7ubuntu3.2 [679 kB]
+Get:46 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 build-essential amd64 12.8ubuntu1.1 [4664 B]
+Get:47 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libfakeroot amd64 1.24-1 [25.7 kB]
+Get:48 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 fakeroot amd64 1.24-1 [62.6 kB]
+Get:49 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libalgorithm-diff-perl all 1.19.03-2 [46.6 kB]
+Get:50 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libalgorithm-diff-xs-perl amd64 0.04-6 [11.3 kB]
+Get:51 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libalgorithm-merge-perl all 0.08-3 [12.0 kB]
+Get:52 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libexpat1-dev amd64 2.2.9-1ubuntu0.6 [116 kB]
+Get:53 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libfile-fcntllock-perl amd64 0.22-3build4 [33.1 kB]
+Get:54 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-dev amd64 3.8.10-0ubuntu1~20.04.8 [3950 kB]
+Get:55 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libpython3-dev amd64 3.8.2-0ubuntu2 [7236 B]
+Get:56 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 manpages-dev all 5.05-1 [2266 kB]
 Get:57 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 zlib1g-dev amd64 1:1.2.11.dfsg-2ubuntu1.5 [155 kB]
 Get:58 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3.8-dev amd64 3.8.10-0ubuntu1~20.04.8 [514 kB]
 Get:59 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 python3-dev amd64 3.8.2-0ubuntu2 [1212 B]
 Get:60 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 python3-wheel all 0.34.2-1ubuntu0.1 [23.9 kB]
-Get:61 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 python3-pip all 20.0.2-5ubuntu1.8 [231 kB]
-Fetched 61.9 MB in 1s (53.9 MB/s)
+Get:61 http://security.ubuntu.com/ubuntu focal-security/universe amd64 python3-pip all 20.0.2-5ubuntu1.9 [231 kB]
+Fetched 61.9 MB in 1s (46.3 MB/s)
 (Reading database ... 
 (Reading database ... 5%
 (Reading database ... 10%
@@ -567,8 +567,8 @@ Selecting previously unselected package manpages-dev.
 Preparing to unpack .../48-manpages-dev_5.05-1_all.deb ...
 Unpacking manpages-dev (5.05-1) ...
 Selecting previously unselected package python-pip-whl.
-Preparing to unpack .../49-python-pip-whl_20.0.2-5ubuntu1.8_all.deb ...
-Unpacking python-pip-whl (20.0.2-5ubuntu1.8) ...
+Preparing to unpack .../49-python-pip-whl_20.0.2-5ubuntu1.9_all.deb ...
+Unpacking python-pip-whl (20.0.2-5ubuntu1.9) ...
 Selecting previously unselected package zlib1g-dev:amd64.
 Preparing to unpack .../50-zlib1g-dev_1%3a1.2.11.dfsg-2ubuntu1.5_amd64.deb ...
 Unpacking zlib1g-dev:amd64 (1:1.2.11.dfsg-2ubuntu1.5) ...
@@ -582,8 +582,8 @@ Selecting previously unselected package python3-wheel.
 Preparing to unpack .../53-python3-wheel_0.34.2-1ubuntu0.1_all.deb ...
 Unpacking python3-wheel (0.34.2-1ubuntu0.1) ...
 Selecting previously unselected package python3-pip.
-Preparing to unpack .../54-python3-pip_20.0.2-5ubuntu1.8_all.deb ...
-Unpacking python3-pip (20.0.2-5ubuntu1.8) ...
+Preparing to unpack .../54-python3-pip_20.0.2-5ubuntu1.9_all.deb ...
+Unpacking python3-pip (20.0.2-5ubuntu1.9) ...
 Setting up libexpat1:amd64 (2.2.9-1ubuntu0.6) ...
 Setting up manpages-dev (5.05-1) ...
 Setting up libpython3.8-minimal:amd64 (3.8.10-0ubuntu1~20.04.8) ...
@@ -606,7 +606,7 @@ Setting up libubsan1:amd64 (10.3.0-1ubuntu1~20.04) ...
 Setting up python3.8-minimal (3.8.10-0ubuntu1~20.04.8) ...
 Setting up libcrypt-dev:amd64 (1:4.4.10-10ubuntu4) ...
 Setting up libisl22:amd64 (0.22.1-1) ...
-Setting up python-pip-whl (20.0.2-5ubuntu1.8) ...
+Setting up python-pip-whl (20.0.2-5ubuntu1.9) ...
 Setting up libbinutils:amd64 (2.34-6ubuntu1.5) ...
 Setting up libpython3.8-stdlib:amd64 (3.8.10-0ubuntu1~20.04.8) ...
 Setting up libc-dev-bin (2.31-0ubuntu9.9) ...
@@ -621,7 +621,7 @@ Setting up libtsan0:amd64 (10.3.0-1ubuntu1~20.04) ...
 Setting up libctf0:amd64 (2.34-6ubuntu1.5) ...
 Setting up libasan5:amd64 (9.4.0-1ubuntu1~20.04.1) ...
 Setting up libpython3.8:amd64 (3.8.10-0ubuntu1~20.04.8) ...
-Setting up python3-pip (20.0.2-5ubuntu1.8) ...
+Setting up python3-pip (20.0.2-5ubuntu1.9) ...
 Setting up cpp-9 (9.4.0-1ubuntu1~20.04.1) ...
 Setting up libc6-dev:amd64 (2.31-0ubuntu9.9) ...
 Setting up binutils-x86-64-linux-gnu (2.34-6ubuntu1.5) ...
@@ -647,26 +647,22 @@ Processing triggers for man-db (2.9.1-1) ...
 Processing triggers for mime-support (3.64ubuntu1) ...
 Collecting flask
   Downloading Flask-2.3.2-py3-none-any.whl (96 kB)
-Collecting blinker>=1.6.2
-  Downloading blinker-1.6.2-py3-none-any.whl (13 kB)
 Collecting Jinja2>=3.1.2
   Downloading Jinja2-3.1.2-py3-none-any.whl (133 kB)
-Collecting importlib-metadata>=3.6.0; python_version < "3.10"
-  Downloading importlib_metadata-6.6.0-py3-none-any.whl (22 kB)
-Collecting click>=8.1.3
-  Downloading click-8.1.3-py3-none-any.whl (96 kB)
 Collecting itsdangerous>=2.1.2
   Downloading itsdangerous-2.1.2-py3-none-any.whl (15 kB)
+Collecting blinker>=1.6.2
+  Downloading blinker-1.6.2-py3-none-any.whl (13 kB)
+Collecting click>=8.1.3
+  Downloading click-8.1.3-py3-none-any.whl (96 kB)
 Collecting Werkzeug>=2.3.3
   Downloading Werkzeug-2.3.6-py3-none-any.whl (242 kB)
+Collecting importlib-metadata>=3.6.0; python_version < "3.10"
+  Downloading importlib_metadata-6.6.0-py3-none-any.whl (22 kB)
 Collecting MarkupSafe>=2.0
   Downloading MarkupSafe-2.1.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
 Requirement already satisfied: zipp>=0.5 in /usr/lib/python3/dist-packages (from importlib-metadata>=3.6.0; python_version < "3.10"->flask) (1.0.0)
-Installing collected packages: blinker, MarkupSafe, Jinja2, importlib-metadata, click, itsdangerous, Werkzeug, flask
-  Attempting uninstall: blinker
-    Found existing installation: blinker 1.4
-    Not uninstalling blinker at /usr/lib/python3/dist-packages, outside environment /usr
-    Can't uninstall 'blinker'. No files were found to uninstall.
+Installing collected packages: MarkupSafe, Jinja2, itsdangerous, blinker, click, Werkzeug, importlib-metadata, flask
   Attempting uninstall: MarkupSafe
     Found existing installation: MarkupSafe 1.1.0
     Not uninstalling markupsafe at /usr/lib/python3/dist-packages, outside environment /usr
@@ -675,28 +671,32 @@ Installing collected packages: blinker, MarkupSafe, Jinja2, importlib-metadata, 
     Found existing installation: Jinja2 2.10.1
     Not uninstalling jinja2 at /usr/lib/python3/dist-packages, outside environment /usr
     Can't uninstall 'Jinja2'. No files were found to uninstall.
-  Attempting uninstall: importlib-metadata
-    Found existing installation: importlib-metadata 1.5.0
-    Not uninstalling importlib-metadata at /usr/lib/python3/dist-packages, outside environment /usr
-    Can't uninstall 'importlib-metadata'. No files were found to uninstall.
+  Attempting uninstall: blinker
+    Found existing installation: blinker 1.4
+    Not uninstalling blinker at /usr/lib/python3/dist-packages, outside environment /usr
+    Can't uninstall 'blinker'. No files were found to uninstall.
   Attempting uninstall: click
     Found existing installation: Click 7.0
     Not uninstalling click at /usr/lib/python3/dist-packages, outside environment /usr
     Can't uninstall 'Click'. No files were found to uninstall.
+  Attempting uninstall: importlib-metadata
+    Found existing installation: importlib-metadata 1.5.0
+    Not uninstalling importlib-metadata at /usr/lib/python3/dist-packages, outside environment /usr
+    Can't uninstall 'importlib-metadata'. No files were found to uninstall.
 Successfully installed Jinja2-3.1.2 MarkupSafe-2.1.3 Werkzeug-2.3.6 blinker-1.6.2 click-8.1.3 flask-2.3.2 importlib-metadata-6.6.0 itsdangerous-2.1.2
 Collecting boto3
   Downloading boto3-1.26.151-py3-none-any.whl (135 kB)
-Collecting botocore<1.30.0,>=1.29.151
-  Downloading botocore-1.29.151-py3-none-any.whl (10.9 MB)
 Collecting jmespath<2.0.0,>=0.7.1
   Downloading jmespath-1.0.1-py3-none-any.whl (20 kB)
+Collecting botocore<1.30.0,>=1.29.151
+  Downloading botocore-1.29.151-py3-none-any.whl (10.9 MB)
 Collecting s3transfer<0.7.0,>=0.6.0
   Downloading s3transfer-0.6.1-py3-none-any.whl (79 kB)
 Collecting python-dateutil<3.0.0,>=2.1
   Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
 Requirement already satisfied: urllib3<1.27,>=1.25.4 in /usr/lib/python3/dist-packages (from botocore<1.30.0,>=1.29.151->boto3) (1.25.8)
 Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil<3.0.0,>=2.1->botocore<1.30.0,>=1.29.151->boto3) (1.14.0)
-Installing collected packages: python-dateutil, jmespath, botocore, s3transfer, boto3
+Installing collected packages: jmespath, python-dateutil, botocore, s3transfer, boto3
 Successfully installed boto3-1.26.151 botocore-1.29.151 jmespath-1.0.1 python-dateutil-2.8.2 s3transfer-0.6.1
 Requirement already satisfied: requests in /usr/lib/python3/dist-packages (2.22.0)
 Reading package lists...
@@ -708,12 +708,12 @@ Suggested packages:
   python3-gssapi
 The following NEW packages will be installed:
   python3-bcrypt python3-paramiko
-0 upgraded, 2 newly installed, 0 to remove and 247 not upgraded.
+0 upgraded, 2 newly installed, 0 to remove and 248 not upgraded.
 Need to get 153 kB of archives.
 After this operation, 814 kB of additional disk space will be used.
 Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 python3-bcrypt amd64 3.1.7-2ubuntu1 [30.4 kB]
 Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-paramiko all 2.6.0-2ubuntu0.1 [122 kB]
-Fetched 153 kB in 0s (6932 kB/s)
+Fetched 153 kB in 0s (4271 kB/s)
 Selecting previously unselected package python3-bcrypt.
 (Reading database ... 
 (Reading database ... 5%
@@ -751,11 +751,11 @@ Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-1038-aws x86_64)
  * Management:     https://landscape.canonical.com
  * Support:        https://ubuntu.com/advantage
 
-  System information as of Sun Jun 11 18:36:45 UTC 2023
+  System information as of Mon Jun 12 14:15:43 UTC 2023
 
-  System load:  0.56              Processes:             110
-  Usage of /:   16.5% of 7.69GB   Users logged in:       0
-  Memory usage: 24%               IPv4 address for ens5: 172.31.94.172
+  System load:  0.14              Processes:             110
+  Usage of /:   16.4% of 7.69GB   Users logged in:       0
+  Memory usage: 23%               IPv4 address for ens5: 172.31.87.40
   Swap usage:   0%
 
 
@@ -773,14 +773,14 @@ Run 'do-release-upgrade' to upgrade to it.
 Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal InRelease
 Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
 Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
-Get:4 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
-Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
+Get:5 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
 Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe Translation-en [5124 kB]
 Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 c-n-f Metadata [265 kB]
 Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [144 kB]
 Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/multiverse Translation-en [104 kB]
 Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/multiverse amd64 c-n-f Metadata [9136 B]
-Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2615 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2613 kB]
 Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [440 kB]
 Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [16.8 kB]
 Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [1937 kB]
@@ -801,7 +801,7 @@ Get:28 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports/universe T
 Get:29 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [880 B]
 Get:30 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports/multiverse amd64 c-n-f Metadata [116 B]
 Get:31 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [2232 kB]
-Get:32 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [358 kB]
+Get:32 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [359 kB]
 Get:33 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [13.0 kB]
 Get:34 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [1833 kB]
 Get:35 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [256 kB]
@@ -812,14 +812,14 @@ Get:39 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Met
 Get:40 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [22.9 kB]
 Get:41 http://security.ubuntu.com/ubuntu focal-security/multiverse Translation-en [5488 B]
 Get:42 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [540 B]
-Fetched 27.1 MB in 4s (6861 kB/s)
+Fetched 27.1 MB in 4s (6851 kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
 Reading state information...
 python3 is already the newest version (3.8.2-0ubuntu2).
 python3 set to manually installed.
-0 upgraded, 0 newly installed, 0 to remove and 258 not upgraded.
+0 upgraded, 0 newly installed, 0 to remove and 259 not upgraded.
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -853,7 +853,7 @@ The following NEW packages will be installed:
 The following packages will be upgraded:
   gcc-10-base libc6 libexpat1 libgcc-s1 libpython3.8 libpython3.8-minimal
   libpython3.8-stdlib libstdc++6 python3.8 python3.8-minimal zlib1g
-11 upgraded, 50 newly installed, 0 to remove and 247 not upgraded.
+11 upgraded, 50 newly installed, 0 to remove and 248 not upgraded.
 Need to get 61.9 MB of archives.
 After this operation, 228 MB of additional disk space will be used.
 Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 gcc-10-base amd64 10.3.0-1ubuntu1~20.04 [20.2 kB]
@@ -863,61 +863,61 @@ Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 li
 Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libexpat1 amd64 2.2.9-1ubuntu0.6 [74.6 kB]
 Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 zlib1g amd64 1:1.2.11.dfsg-2ubuntu1.5 [54.2 kB]
 Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8 amd64 3.8.10-0ubuntu1~20.04.8 [1625 kB]
-Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3.8 amd64 3.8.10-0ubuntu1~20.04.8 [387 kB]
-Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-stdlib amd64 3.8.10-0ubuntu1~20.04.8 [1675 kB]
-Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3.8-minimal amd64 3.8.10-0ubuntu1~20.04.8 [1902 kB]
-Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-minimal amd64 3.8.10-0ubuntu1~20.04.8 [717 kB]
-Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 binutils-common amd64 2.34-6ubuntu1.5 [207 kB]
-Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libbinutils amd64 2.34-6ubuntu1.5 [475 kB]
-Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libctf-nobfd0 amd64 2.34-6ubuntu1.5 [47.4 kB]
-Get:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libctf0 amd64 2.34-6ubuntu1.5 [46.6 kB]
-Get:16 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 binutils-x86-64-linux-gnu amd64 2.34-6ubuntu1.5 [1613 kB]
-Get:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 binutils amd64 2.34-6ubuntu1.5 [3372 B]
-Get:18 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libc-dev-bin amd64 2.31-0ubuntu9.9 [71.8 kB]
-Get:19 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 linux-libc-dev amd64 5.4.0-150.167 [1117 kB]
-Get:20 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libcrypt-dev amd64 1:4.4.10-10ubuntu4 [104 kB]
-Get:21 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libc6-dev amd64 2.31-0ubuntu9.9 [2519 kB]
-Get:22 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 gcc-9-base amd64 9.4.0-1ubuntu1~20.04.1 [19.4 kB]
-Get:23 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libisl22 amd64 0.22.1-1 [592 kB]
-Get:24 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libmpc3 amd64 1.1.0-1 [40.8 kB]
-Get:25 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 cpp-9 amd64 9.4.0-1ubuntu1~20.04.1 [7500 kB]
-Get:26 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 cpp amd64 4:9.3.0-1ubuntu2 [27.6 kB]
-Get:27 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libcc1-0 amd64 10.3.0-1ubuntu1~20.04 [48.8 kB]
-Get:28 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libgomp1 amd64 10.3.0-1ubuntu1~20.04 [102 kB]
-Get:29 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libitm1 amd64 10.3.0-1ubuntu1~20.04 [26.2 kB]
-Get:30 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libatomic1 amd64 10.3.0-1ubuntu1~20.04 [9284 B]
-Get:31 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libasan5 amd64 9.4.0-1ubuntu1~20.04.1 [2751 kB]
-Get:32 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 liblsan0 amd64 10.3.0-1ubuntu1~20.04 [835 kB]
-Get:33 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libtsan0 amd64 10.3.0-1ubuntu1~20.04 [2009 kB]
-Get:34 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libubsan1 amd64 10.3.0-1ubuntu1~20.04 [784 kB]
-Get:35 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libquadmath0 amd64 10.3.0-1ubuntu1~20.04 [146 kB]
-Get:36 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libgcc-9-dev amd64 9.4.0-1ubuntu1~20.04.1 [2359 kB]
-Get:37 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 gcc-9 amd64 9.4.0-1ubuntu1~20.04.1 [8274 kB]
-Get:38 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 gcc amd64 4:9.3.0-1ubuntu2 [5208 B]
-Get:39 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libstdc++-9-dev amd64 9.4.0-1ubuntu1~20.04.1 [1722 kB]
-Get:40 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 g++-9 amd64 9.4.0-1ubuntu1~20.04.1 [8420 kB]
-Get:41 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 g++ amd64 4:9.3.0-1ubuntu2 [1604 B]
-Get:42 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 make amd64 4.2.1-1.2 [162 kB]
-Get:43 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libdpkg-perl all 1.19.7ubuntu3.2 [231 kB]
-Get:44 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 dpkg-dev all 1.19.7ubuntu3.2 [679 kB]
-Get:45 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 build-essential amd64 12.8ubuntu1.1 [4664 B]
-Get:46 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libfakeroot amd64 1.24-1 [25.7 kB]
-Get:47 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 fakeroot amd64 1.24-1 [62.6 kB]
-Get:48 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libalgorithm-diff-perl all 1.19.03-2 [46.6 kB]
-Get:49 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libalgorithm-diff-xs-perl amd64 0.04-6 [11.3 kB]
-Get:50 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libalgorithm-merge-perl all 0.08-3 [12.0 kB]
-Get:51 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libexpat1-dev amd64 2.2.9-1ubuntu0.6 [116 kB]
-Get:52 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libfile-fcntllock-perl amd64 0.22-3build4 [33.1 kB]
-Get:53 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-dev amd64 3.8.10-0ubuntu1~20.04.8 [3950 kB]
-Get:54 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libpython3-dev amd64 3.8.2-0ubuntu2 [7236 B]
-Get:55 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 manpages-dev all 5.05-1 [2266 kB]
-Get:56 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 python-pip-whl all 20.0.2-5ubuntu1.8 [1805 kB]
-Get:57 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 zlib1g-dev amd64 1:1.2.11.dfsg-2ubuntu1.5 [155 kB]
-Get:58 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3.8-dev amd64 3.8.10-0ubuntu1~20.04.8 [514 kB]
-Get:59 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 python3-dev amd64 3.8.2-0ubuntu2 [1212 B]
-Get:60 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 python3-wheel all 0.34.2-1ubuntu0.1 [23.9 kB]
-Get:61 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 python3-pip all 20.0.2-5ubuntu1.8 [231 kB]
-Fetched 61.9 MB in 1s (55.9 MB/s)
+Get:8 http://security.ubuntu.com/ubuntu focal-security/universe amd64 python-pip-whl all 20.0.2-5ubuntu1.9 [1805 kB]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3.8 amd64 3.8.10-0ubuntu1~20.04.8 [387 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-stdlib amd64 3.8.10-0ubuntu1~20.04.8 [1675 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3.8-minimal amd64 3.8.10-0ubuntu1~20.04.8 [1902 kB]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-minimal amd64 3.8.10-0ubuntu1~20.04.8 [717 kB]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 binutils-common amd64 2.34-6ubuntu1.5 [207 kB]
+Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libbinutils amd64 2.34-6ubuntu1.5 [475 kB]
+Get:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libctf-nobfd0 amd64 2.34-6ubuntu1.5 [47.4 kB]
+Get:16 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libctf0 amd64 2.34-6ubuntu1.5 [46.6 kB]
+Get:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 binutils-x86-64-linux-gnu amd64 2.34-6ubuntu1.5 [1613 kB]
+Get:18 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 binutils amd64 2.34-6ubuntu1.5 [3372 B]
+Get:19 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libc-dev-bin amd64 2.31-0ubuntu9.9 [71.8 kB]
+Get:20 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 linux-libc-dev amd64 5.4.0-150.167 [1117 kB]
+Get:21 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libcrypt-dev amd64 1:4.4.10-10ubuntu4 [104 kB]
+Get:22 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libc6-dev amd64 2.31-0ubuntu9.9 [2519 kB]
+Get:23 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 gcc-9-base amd64 9.4.0-1ubuntu1~20.04.1 [19.4 kB]
+Get:24 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libisl22 amd64 0.22.1-1 [592 kB]
+Get:25 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libmpc3 amd64 1.1.0-1 [40.8 kB]
+Get:26 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 cpp-9 amd64 9.4.0-1ubuntu1~20.04.1 [7500 kB]
+Get:27 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 cpp amd64 4:9.3.0-1ubuntu2 [27.6 kB]
+Get:28 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libcc1-0 amd64 10.3.0-1ubuntu1~20.04 [48.8 kB]
+Get:29 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libgomp1 amd64 10.3.0-1ubuntu1~20.04 [102 kB]
+Get:30 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libitm1 amd64 10.3.0-1ubuntu1~20.04 [26.2 kB]
+Get:31 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libatomic1 amd64 10.3.0-1ubuntu1~20.04 [9284 B]
+Get:32 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libasan5 amd64 9.4.0-1ubuntu1~20.04.1 [2751 kB]
+Get:33 http://security.ubuntu.com/ubuntu focal-security/universe amd64 python3-pip all 20.0.2-5ubuntu1.9 [231 kB]
+Get:34 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 liblsan0 amd64 10.3.0-1ubuntu1~20.04 [835 kB]
+Get:35 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libtsan0 amd64 10.3.0-1ubuntu1~20.04 [2009 kB]
+Get:36 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libubsan1 amd64 10.3.0-1ubuntu1~20.04 [784 kB]
+Get:37 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libquadmath0 amd64 10.3.0-1ubuntu1~20.04 [146 kB]
+Get:38 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libgcc-9-dev amd64 9.4.0-1ubuntu1~20.04.1 [2359 kB]
+Get:39 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 gcc-9 amd64 9.4.0-1ubuntu1~20.04.1 [8274 kB]
+Get:40 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 gcc amd64 4:9.3.0-1ubuntu2 [5208 B]
+Get:41 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libstdc++-9-dev amd64 9.4.0-1ubuntu1~20.04.1 [1722 kB]
+Get:42 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 g++-9 amd64 9.4.0-1ubuntu1~20.04.1 [8420 kB]
+Get:43 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 g++ amd64 4:9.3.0-1ubuntu2 [1604 B]
+Get:44 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 make amd64 4.2.1-1.2 [162 kB]
+Get:45 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libdpkg-perl all 1.19.7ubuntu3.2 [231 kB]
+Get:46 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 dpkg-dev all 1.19.7ubuntu3.2 [679 kB]
+Get:47 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 build-essential amd64 12.8ubuntu1.1 [4664 B]
+Get:48 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libfakeroot amd64 1.24-1 [25.7 kB]
+Get:49 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 fakeroot amd64 1.24-1 [62.6 kB]
+Get:50 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libalgorithm-diff-perl all 1.19.03-2 [46.6 kB]
+Get:51 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libalgorithm-diff-xs-perl amd64 0.04-6 [11.3 kB]
+Get:52 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libalgorithm-merge-perl all 0.08-3 [12.0 kB]
+Get:53 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libexpat1-dev amd64 2.2.9-1ubuntu0.6 [116 kB]
+Get:54 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libfile-fcntllock-perl amd64 0.22-3build4 [33.1 kB]
+Get:55 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-dev amd64 3.8.10-0ubuntu1~20.04.8 [3950 kB]
+Get:56 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libpython3-dev amd64 3.8.2-0ubuntu2 [7236 B]
+Get:57 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 manpages-dev all 5.05-1 [2266 kB]
+Get:58 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 zlib1g-dev amd64 1:1.2.11.dfsg-2ubuntu1.5 [155 kB]
+Get:59 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3.8-dev amd64 3.8.10-0ubuntu1~20.04.8 [514 kB]
+Get:60 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 python3-dev amd64 3.8.2-0ubuntu2 [1212 B]
+Get:61 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 python3-wheel all 0.34.2-1ubuntu0.1 [23.9 kB]
+Fetched 61.9 MB in 2s (34.6 MB/s)
 (Reading database ... 
 (Reading database ... 5%
 (Reading database ... 10%
@@ -1216,8 +1216,8 @@ Selecting previously unselected package manpages-dev.
 Preparing to unpack .../48-manpages-dev_5.05-1_all.deb ...
 Unpacking manpages-dev (5.05-1) ...
 Selecting previously unselected package python-pip-whl.
-Preparing to unpack .../49-python-pip-whl_20.0.2-5ubuntu1.8_all.deb ...
-Unpacking python-pip-whl (20.0.2-5ubuntu1.8) ...
+Preparing to unpack .../49-python-pip-whl_20.0.2-5ubuntu1.9_all.deb ...
+Unpacking python-pip-whl (20.0.2-5ubuntu1.9) ...
 Selecting previously unselected package zlib1g-dev:amd64.
 Preparing to unpack .../50-zlib1g-dev_1%3a1.2.11.dfsg-2ubuntu1.5_amd64.deb ...
 Unpacking zlib1g-dev:amd64 (1:1.2.11.dfsg-2ubuntu1.5) ...
@@ -1231,8 +1231,8 @@ Selecting previously unselected package python3-wheel.
 Preparing to unpack .../53-python3-wheel_0.34.2-1ubuntu0.1_all.deb ...
 Unpacking python3-wheel (0.34.2-1ubuntu0.1) ...
 Selecting previously unselected package python3-pip.
-Preparing to unpack .../54-python3-pip_20.0.2-5ubuntu1.8_all.deb ...
-Unpacking python3-pip (20.0.2-5ubuntu1.8) ...
+Preparing to unpack .../54-python3-pip_20.0.2-5ubuntu1.9_all.deb ...
+Unpacking python3-pip (20.0.2-5ubuntu1.9) ...
 Setting up libexpat1:amd64 (2.2.9-1ubuntu0.6) ...
 Setting up manpages-dev (5.05-1) ...
 Setting up libpython3.8-minimal:amd64 (3.8.10-0ubuntu1~20.04.8) ...
@@ -1255,7 +1255,7 @@ Setting up libubsan1:amd64 (10.3.0-1ubuntu1~20.04) ...
 Setting up python3.8-minimal (3.8.10-0ubuntu1~20.04.8) ...
 Setting up libcrypt-dev:amd64 (1:4.4.10-10ubuntu4) ...
 Setting up libisl22:amd64 (0.22.1-1) ...
-Setting up python-pip-whl (20.0.2-5ubuntu1.8) ...
+Setting up python-pip-whl (20.0.2-5ubuntu1.9) ...
 Setting up libbinutils:amd64 (2.34-6ubuntu1.5) ...
 Setting up libpython3.8-stdlib:amd64 (3.8.10-0ubuntu1~20.04.8) ...
 Setting up libc-dev-bin (2.31-0ubuntu9.9) ...
@@ -1270,7 +1270,7 @@ Setting up libtsan0:amd64 (10.3.0-1ubuntu1~20.04) ...
 Setting up libctf0:amd64 (2.34-6ubuntu1.5) ...
 Setting up libasan5:amd64 (9.4.0-1ubuntu1~20.04.1) ...
 Setting up libpython3.8:amd64 (3.8.10-0ubuntu1~20.04.8) ...
-Setting up python3-pip (20.0.2-5ubuntu1.8) ...
+Setting up python3-pip (20.0.2-5ubuntu1.9) ...
 Setting up cpp-9 (9.4.0-1ubuntu1~20.04.1) ...
 Setting up libc6-dev:amd64 (2.31-0ubuntu9.9) ...
 Setting up binutils-x86-64-linux-gnu (2.34-6ubuntu1.5) ...
@@ -1296,54 +1296,54 @@ Processing triggers for man-db (2.9.1-1) ...
 Processing triggers for mime-support (3.64ubuntu1) ...
 Collecting flask
   Downloading Flask-2.3.2-py3-none-any.whl (96 kB)
-Collecting click>=8.1.3
-  Downloading click-8.1.3-py3-none-any.whl (96 kB)
+Collecting blinker>=1.6.2
+  Downloading blinker-1.6.2-py3-none-any.whl (13 kB)
+Collecting Jinja2>=3.1.2
+  Downloading Jinja2-3.1.2-py3-none-any.whl (133 kB)
 Collecting importlib-metadata>=3.6.0; python_version < "3.10"
   Downloading importlib_metadata-6.6.0-py3-none-any.whl (22 kB)
 Collecting Werkzeug>=2.3.3
   Downloading Werkzeug-2.3.6-py3-none-any.whl (242 kB)
-Collecting blinker>=1.6.2
-  Downloading blinker-1.6.2-py3-none-any.whl (13 kB)
 Collecting itsdangerous>=2.1.2
   Downloading itsdangerous-2.1.2-py3-none-any.whl (15 kB)
-Collecting Jinja2>=3.1.2
-  Downloading Jinja2-3.1.2-py3-none-any.whl (133 kB)
-Requirement already satisfied: zipp>=0.5 in /usr/lib/python3/dist-packages (from importlib-metadata>=3.6.0; python_version < "3.10"->flask) (1.0.0)
-Collecting MarkupSafe>=2.1.1
+Collecting click>=8.1.3
+  Downloading click-8.1.3-py3-none-any.whl (96 kB)
+Collecting MarkupSafe>=2.0
   Downloading MarkupSafe-2.1.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
-Installing collected packages: click, importlib-metadata, MarkupSafe, Werkzeug, blinker, itsdangerous, Jinja2, flask
-  Attempting uninstall: click
-    Found existing installation: Click 7.0
-    Not uninstalling click at /usr/lib/python3/dist-packages, outside environment /usr
-    Can't uninstall 'Click'. No files were found to uninstall.
-  Attempting uninstall: importlib-metadata
-    Found existing installation: importlib-metadata 1.5.0
-    Not uninstalling importlib-metadata at /usr/lib/python3/dist-packages, outside environment /usr
-    Can't uninstall 'importlib-metadata'. No files were found to uninstall.
-  Attempting uninstall: MarkupSafe
-    Found existing installation: MarkupSafe 1.1.0
-    Not uninstalling markupsafe at /usr/lib/python3/dist-packages, outside environment /usr
-    Can't uninstall 'MarkupSafe'. No files were found to uninstall.
+Requirement already satisfied: zipp>=0.5 in /usr/lib/python3/dist-packages (from importlib-metadata>=3.6.0; python_version < "3.10"->flask) (1.0.0)
+Installing collected packages: blinker, MarkupSafe, Jinja2, importlib-metadata, Werkzeug, itsdangerous, click, flask
   Attempting uninstall: blinker
     Found existing installation: blinker 1.4
     Not uninstalling blinker at /usr/lib/python3/dist-packages, outside environment /usr
     Can't uninstall 'blinker'. No files were found to uninstall.
+  Attempting uninstall: MarkupSafe
+    Found existing installation: MarkupSafe 1.1.0
+    Not uninstalling markupsafe at /usr/lib/python3/dist-packages, outside environment /usr
+    Can't uninstall 'MarkupSafe'. No files were found to uninstall.
   Attempting uninstall: Jinja2
     Found existing installation: Jinja2 2.10.1
     Not uninstalling jinja2 at /usr/lib/python3/dist-packages, outside environment /usr
     Can't uninstall 'Jinja2'. No files were found to uninstall.
+  Attempting uninstall: importlib-metadata
+    Found existing installation: importlib-metadata 1.5.0
+    Not uninstalling importlib-metadata at /usr/lib/python3/dist-packages, outside environment /usr
+    Can't uninstall 'importlib-metadata'. No files were found to uninstall.
+  Attempting uninstall: click
+    Found existing installation: Click 7.0
+    Not uninstalling click at /usr/lib/python3/dist-packages, outside environment /usr
+    Can't uninstall 'Click'. No files were found to uninstall.
 Successfully installed Jinja2-3.1.2 MarkupSafe-2.1.3 Werkzeug-2.3.6 blinker-1.6.2 click-8.1.3 flask-2.3.2 importlib-metadata-6.6.0 itsdangerous-2.1.2
 Collecting boto3
   Downloading boto3-1.26.151-py3-none-any.whl (135 kB)
 Collecting jmespath<2.0.0,>=0.7.1
   Downloading jmespath-1.0.1-py3-none-any.whl (20 kB)
-Collecting s3transfer<0.7.0,>=0.6.0
-  Downloading s3transfer-0.6.1-py3-none-any.whl (79 kB)
 Collecting botocore<1.30.0,>=1.29.151
   Downloading botocore-1.29.151-py3-none-any.whl (10.9 MB)
+Collecting s3transfer<0.7.0,>=0.6.0
+  Downloading s3transfer-0.6.1-py3-none-any.whl (79 kB)
+Requirement already satisfied: urllib3<1.27,>=1.25.4 in /usr/lib/python3/dist-packages (from botocore<1.30.0,>=1.29.151->boto3) (1.25.8)
 Collecting python-dateutil<3.0.0,>=2.1
   Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
-Requirement already satisfied: urllib3<1.27,>=1.25.4 in /usr/lib/python3/dist-packages (from botocore<1.30.0,>=1.29.151->boto3) (1.25.8)
 Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil<3.0.0,>=2.1->botocore<1.30.0,>=1.29.151->boto3) (1.14.0)
 Installing collected packages: jmespath, python-dateutil, botocore, s3transfer, boto3
 Successfully installed boto3-1.26.151 botocore-1.29.151 jmespath-1.0.1 python-dateutil-2.8.2 s3transfer-0.6.1
@@ -1357,12 +1357,12 @@ Suggested packages:
   python3-gssapi
 The following NEW packages will be installed:
   python3-bcrypt python3-paramiko
-0 upgraded, 2 newly installed, 0 to remove and 247 not upgraded.
+0 upgraded, 2 newly installed, 0 to remove and 248 not upgraded.
 Need to get 153 kB of archives.
 After this operation, 814 kB of additional disk space will be used.
 Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 python3-bcrypt amd64 3.1.7-2ubuntu1 [30.4 kB]
 Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-paramiko all 2.6.0-2ubuntu0.1 [122 kB]
-Fetched 153 kB in 0s (7142 kB/s)
+Fetched 153 kB in 0s (7290 kB/s)
 Selecting previously unselected package python3-bcrypt.
 (Reading database ... 
 (Reading database ... 5%
@@ -1396,41 +1396,41 @@ Setting up python3-paramiko (2.6.0-2ubuntu0.1) ...
 {
     "InstanceProfile": {
         "Path": "/",
-        "InstanceProfileName": "name-1-cloud-course-806661700",
-        "InstanceProfileId": "AIPAW6F3W256QRXD57UI6",
-        "Arn": "arn:aws:iam::477135034237:instance-profile/name-1-cloud-course-806661700",
-        "CreateDate": "2023-06-11T18:38:13+00:00",
+        "InstanceProfileName": "name-1-cloud-course-571936500",
+        "InstanceProfileId": "AIPAW6F3W2567P3MVY7PF",
+        "Arn": "arn:aws:iam::477135034237:instance-profile/name-1-cloud-course-571936500",
+        "CreateDate": "2023-06-12T14:17:49+00:00",
         "Roles": []
     }
 }
 {
     "InstanceProfile": {
         "Path": "/",
-        "InstanceProfileName": "name-2-cloud-course-838438600",
-        "InstanceProfileId": "AIPAW6F3W256XU56A56J4",
-        "Arn": "arn:aws:iam::477135034237:instance-profile/name-2-cloud-course-838438600",
-        "CreateDate": "2023-06-11T18:38:16+00:00",
+        "InstanceProfileName": "name-2-cloud-course-615273800",
+        "InstanceProfileId": "AIPAW6F3W256YZ663OG2E",
+        "Arn": "arn:aws:iam::477135034237:instance-profile/name-2-cloud-course-615273800",
+        "CreateDate": "2023-06-12T14:17:51+00:00",
         "Roles": []
     }
 }
 {
     "IamInstanceProfileAssociation": {
-        "AssociationId": "iip-assoc-00b36aeb233a0c27d",
-        "InstanceId": "i-0ba7e8e223c787bcc",
+        "AssociationId": "iip-assoc-02679b874cd0565ea",
+        "InstanceId": "i-048d5f2b7e93e5a5f",
         "IamInstanceProfile": {
-            "Arn": "arn:aws:iam::477135034237:instance-profile/name-1-cloud-course-806661700",
-            "Id": "AIPAW6F3W256QRXD57UI6"
+            "Arn": "arn:aws:iam::477135034237:instance-profile/name-1-cloud-course-571936500",
+            "Id": "AIPAW6F3W2567P3MVY7PF"
         },
         "State": "associating"
     }
 }
 {
     "IamInstanceProfileAssociation": {
-        "AssociationId": "iip-assoc-057dc756813297454",
-        "InstanceId": "i-02a16c6303a5cb685",
+        "AssociationId": "iip-assoc-084961eeb46384445",
+        "InstanceId": "i-0614aab035a80135b",
         "IamInstanceProfile": {
-            "Arn": "arn:aws:iam::477135034237:instance-profile/name-2-cloud-course-838438600",
-            "Id": "AIPAW6F3W256XU56A56J4"
+            "Arn": "arn:aws:iam::477135034237:instance-profile/name-2-cloud-course-615273800",
+            "Id": "AIPAW6F3W256YZ663OG2E"
         },
         "State": "associating"
     }
@@ -1438,11 +1438,11 @@ Setting up python3-paramiko (2.6.0-2ubuntu0.1) ...
 {
     "IamInstanceProfileAssociations": [
         {
-            "AssociationId": "iip-assoc-00b36aeb233a0c27d",
-            "InstanceId": "i-0ba7e8e223c787bcc",
+            "AssociationId": "iip-assoc-02679b874cd0565ea",
+            "InstanceId": "i-048d5f2b7e93e5a5f",
             "IamInstanceProfile": {
-                "Arn": "arn:aws:iam::477135034237:instance-profile/name-1-cloud-course-806661700",
-                "Id": "AIPAW6F3W256QRXD57UI6"
+                "Arn": "arn:aws:iam::477135034237:instance-profile/name-1-cloud-course-571936500",
+                "Id": "AIPAW6F3W2567P3MVY7PF"
             },
             "State": "associated"
         }
@@ -1451,28 +1451,28 @@ Setting up python3-paramiko (2.6.0-2ubuntu0.1) ...
 {
     "IamInstanceProfileAssociations": [
         {
-            "AssociationId": "iip-assoc-057dc756813297454",
-            "InstanceId": "i-02a16c6303a5cb685",
+            "AssociationId": "iip-assoc-084961eeb46384445",
+            "InstanceId": "i-0614aab035a80135b",
             "IamInstanceProfile": {
-                "Arn": "arn:aws:iam::477135034237:instance-profile/name-2-cloud-course-838438600",
-                "Id": "AIPAW6F3W256XU56A56J4"
+                "Arn": "arn:aws:iam::477135034237:instance-profile/name-2-cloud-course-615273800",
+                "Id": "AIPAW6F3W256YZ663OG2E"
             },
-            "State": "associating"
+            "State": "associated"
         }
     ]
 }
-IAM roles 'name-1-cloud-course-806661700' and 'name-2-cloud-course-838438600' have been created and attached to the EC2 instances.
+IAM roles 'name-1-cloud-course-571936500' and 'name-2-cloud-course-615273800' have been created and attached to the EC2 instances.
 ---------------------------------------------------------------------------
 testing endpoints
-enqueue work to the first instance by the command: curl -X PUT --data-binary "@testing.bin" "http://3.87.143.228:5000/enqueue?iterations=1"
+enqueue work to the first instance by the command: curl -X PUT --data-binary "@testing.bin" "http://54.159.181.232:5000/enqueue?iterations=1"
 
 POST request processed successfullyPOST request processed successfullyPOST request processed successfully
-enqueue work to the first instance by the command: curl -X PUT --data-binary "@testing.bin" "http://54.86.43.13:5000/enqueue?iterations=2"
+enqueue work to the first instance by the command: curl -X PUT --data-binary "@testing.bin" "http://44.202.123.82:5000/enqueue?iterations=2"
 
 POST request processed successfully
 Waiting for 10 minutes...until the instances will be deployed..
 
-pull completed the 2 tasks from the first instance by the command: curl -X POST "http://3.87.143.228:5000/pullCompleted?top=2"
+pull completed the 2 tasks from the first instance by the command: curl -X POST "http://54.159.181.232:5000/pullCompleted?top=2"
 
 
 task #1 output is:  tÓì]ÙPr·âÌH*£çÛ¿ßòâÚñ½q2¥ò²Öa¢Ìp:ñÕ¤8Ýjm§­)Aú, 
