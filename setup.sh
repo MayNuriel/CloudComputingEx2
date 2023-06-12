@@ -120,13 +120,12 @@ EOF
 
 IAM_ROLE_NAME1="name-1-cloud-course-`date +'%N'`"
 IAM_ROLE_NAME2="name-2-cloud-course-`date +'%N'`"
-sleep 1
+
 
 # Create the IAM role
 IAM_ROLE_ARN1=$(aws iam create-role --role-name "$IAM_ROLE_NAME1" --assume-role-policy-document '{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Principal":{"Service":"ec2.amazonaws.com"},"Action":"sts:AssumeRole"}]}' --query 'Role.Arn' --output text)
-sleep 1
 IAM_ROLE_ARN2=$(aws iam create-role --role-name "$IAM_ROLE_NAME2" --assume-role-policy-document '{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Principal":{"Service":"ec2.amazonaws.com"},"Action":"sts:AssumeRole"}]}' --query 'Role.Arn' --output text)
-sleep 1
+
 
 IAM_POLICY='{
   "Version": "2012-10-17",
@@ -147,41 +146,40 @@ IAM_POLICY='{
     }
   ]
 }'
-sleep 1
+
 
 # Create the IAM policy
 IAM_POLICY_ARN1=$(aws iam create-policy --policy-name "${IAM_ROLE_NAME1}-policy" --policy-document "$IAM_POLICY" --query 'Policy.Arn' --output text)
-sleep 1
 IAM_POLICY_ARN2=$(aws iam create-policy --policy-name "${IAM_ROLE_NAME2}-policy" --policy-document "$IAM_POLICY" --query 'Policy.Arn' --output text)
-sleep 1
+
 # Attach the IAM policy to the IAM role
 aws iam attach-role-policy --role-name "$IAM_ROLE_NAME1" --policy-arn "$IAM_POLICY_ARN1"
-sleep 1
 aws iam attach-role-policy --role-name "$IAM_ROLE_NAME2" --policy-arn "$IAM_POLICY_ARN2"
-sleep 1
+
 # Create the IAM instance profile
-sleep 1
 aws iam create-instance-profile --instance-profile-name "$IAM_ROLE_NAME1"
-sleep 1
 aws iam create-instance-profile --instance-profile-name "$IAM_ROLE_NAME2"
-sleep 1
+
 # Add the IAM role to the instance profile
 aws iam add-role-to-instance-profile --instance-profile-name "$IAM_ROLE_NAME1" --role-name "$IAM_ROLE_NAME1"
-sleep 1
 aws iam add-role-to-instance-profile --instance-profile-name "$IAM_ROLE_NAME2" --role-name "$IAM_ROLE_NAME2"
-sleep 1
+
+# Wait until the instance status is "ok"
+while ! aws iam get-instance-profile --instance-profile-name "$IAM_ROLE_NAME1" >/dev/null 2>&1; do
+    sleep 1
+done
+while ! aws iam get-instance-profile --instance-profile-name "$IAM_ROLE_NAME2" >/dev/null 2>&1; do
+    sleep 1
+done
 
 # Associate the IAM instance profile with the EC2 instances
 aws ec2 associate-iam-instance-profile --instance-id "$INSTANCE_ID_1" --iam-instance-profile Name="$IAM_ROLE_NAME1"
-sleep 1
 aws ec2 associate-iam-instance-profile --instance-id "$INSTANCE_ID_2" --iam-instance-profile Name="$IAM_ROLE_NAME2"
-sleep 1
 
 # Verify the IAM role and instance profile associations
 aws ec2 describe-iam-instance-profile-associations --filters "Name=instance-id,Values=$INSTANCE_ID_1"
-sleep 1
 aws ec2 describe-iam-instance-profile-associations --filters "Name=instance-id,Values=$INSTANCE_ID_2"
-sleep 1
+
 
 echo "IAM roles '$IAM_ROLE_NAME1' and '$IAM_ROLE_NAME2' have been created and attached to the EC2 instances."
 
