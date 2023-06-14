@@ -20,7 +20,7 @@ class Worker:
         if machine2 is not None:
             Worker.nodes.append(machine2)
         lastWorkTime = datetime.now()
-        while (datetime.now() - lastWorkTime).total_seconds() < 50: #rate limit- if 60 sec there is no workthe instance will be terminated
+        while (datetime.now() - lastWorkTime).total_seconds() < 60: #rate limit- if 60 sec there is no workthe instance will be terminated
             for node in Worker.nodes:
                 task = Worker.giveMeWork(node)
                 if task['status'] != 0:
