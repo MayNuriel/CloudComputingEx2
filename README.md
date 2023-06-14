@@ -23,6 +23,5 @@ each one of them creates ec2-instances, "workers", to do the job as needed (with
 •	In addition, you can see an output example of "setup.sh" file in "output.txt".
   the "testing.bin" file is the one we used for the example of testing the enqueue endpoint.
   
-•	"FailureModes.docx" is a document detailing failure modes and how to deal with them if this was a real-world project.
-  Download it in order to read it.
-
+•	"FailureModes.txt" is a document detailing failure modes and how to deal with them if this was a real-world project.
+  
