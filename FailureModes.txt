@@ -1,0 +1,46 @@
+Guide for expected failures include solutions in the real-world:
+
+•	EC2 Instance Failure:
+
+Failure Scenario: 
+One of the EC2 instances hosting the system fails.
+
+Handling Approach: 
+Implement a load balancer in front of the EC2 instances. 
+The load balancer can monitor the health of the instances and automatically route traffic to healthy instances. 
+In case of failure, the load balancer would stop sending requests to the failed instance and redistribute the workload among the remaining instances.
+
+
+•	Network Partition:
+
+Failure Scenario: 
+A network partition occurs, causing a communication breakdown between instances.
+
+Handling Approach: 
+Implement a distributed consensus protocol, such as Paxos, to ensure consistency and fault tolerance in the system. 
+These protocols allow the instances to elect a leader and replicate data across the instances. 
+In the event of a network partition, the protocol would prevent split-brain scenarios and maintain the system's availability and correctness.
+
+
+•	Work Item Processing Failure:
+
+Failure Scenario: 
+An instance encounters an error or crashes while processing a work item.
+
+Handling Approach: 
+Implement a mechanism for tracking the state of work items. 
+When a work item is enqueued, assign it a unique identifier and store its state (e.g., queued, processing, completed) in a shared data structure. 
+If an instance fails while processing a work item, another instance can take over by checking the shared data structure, identifying the failed item, and resuming its processing.
+
+
+•	Unresponsive Instances:
+
+Failure Scenario: 
+An instance becomes unresponsive due to high load or other issues.
+Handling Approach: 
+
+Implement health checks for the instances. Regularly monitor the health of each instance and its ability to handle requests. 
+If an instance is unresponsive or fails health checks, remove it from the load balancer's rotation until it becomes healthy again. 
+This way, traffic is not directed to unresponsive instances, ensuring the stability and performance of the system.
+
+
