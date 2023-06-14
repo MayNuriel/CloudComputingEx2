@@ -37,8 +37,8 @@ If an instance fails while processing a work item, another instance can take ove
 
 Failure Scenario: 
 An instance becomes unresponsive due to high load or other issues.
-Handling Approach: 
 
+Handling Approach: 
 Implement health checks for the instances. Regularly monitor the health of each instance and its ability to handle requests. 
 If an instance is unresponsive or fails health checks, remove it from the load balancer's rotation until it becomes healthy again. 
 This way, traffic is not directed to unresponsive instances, ensuring the stability and performance of the system.
